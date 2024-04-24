@@ -36,27 +36,24 @@ int main() {
     char you, computer, result;
     srand(time(NULL));
     n = rand() % 100;
-
-    if (n < 33)
+  if (n < 33)
         computer = 's';
     else if (n > 33 && n < 66)
         computer = 'p';
     else
         computer = 'z';
-
-    printf("\n\n\t\t\tEnter 's' for STONE, 'p' for PAPER, and 'z' for SCISSOR: ");
+ printf("\n\n\t\t\tEnter 's' for STONE, 'p' for PAPER, and 'z' for SCISSOR: ");
     scanf("%c", &you);
+ result = game(you, computer);
 
-    result = game(you, computer);
-
-    if (result == -1) {
-        printf("\n\n\t\t\tGame Draw!\n");
+  if (result == -1) {
+    printf("\n\n\t\t\tGame Draw!\n");
     } else if (result == 1) {
         printf("\n\n\t\t\tWow! You have won the game!\n");
     } else {
         printf("\n\n\t\t\tOh! You have lost the game!\n");
     }
 
-    printf("\t\t\tYou chose: %c and Computer chose: %c\n", you, computer);
+  printf("\t\t\tYou chose: %c and Computer chose: %c\n", you, computer);
     return 0;
 }
