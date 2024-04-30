@@ -1,5 +1,6 @@
 # minor-project-
-Rock paper and scissors in c
+
+1.Rock paper and scissors in c
 
 
 
